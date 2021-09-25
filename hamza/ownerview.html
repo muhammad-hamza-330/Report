@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body onload="GetDataFromFireBase()">
+  
+    <center><h1 class="Mem" >Owner view</h1></center>
+    <center><button class="R1" onclick="showReports()">Reports</button>
+    <button class="R1" onclick="showSettings()">Settings</button></center>
+
+
+
+    <div class="ownerview" id="ownerviewdiv">
+
+
+<div  id="Settings">
+  
+  <div id="ownerquestion">
+        <h1 class="Mem qt">Questions</h1>
+      <h4 class="Q1">    Q1:<input id="q1" type="text"></h4>
+      <h4 class="Q1">  Q2:<input id="q2" type="text"> </h4>
+      <h4 class="Q1">  Q3:<input id="q3" type="text"></h4>
+        <button class="update1" onclick="updateQuestions()">Update question</button>
+    </div>
+  
+    <h1 class="Mem">Members</h1>
+    <div class="ht" id="Members">
+        
+    </div>
+</div>
+
+<div id="Reports" style="display: none;">
+  <h1>reports tab</h1>
+
+
+</div>
+
+
+
+
+
+
+    </div>
+  </div>
+
+
+
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+   
+   <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+   
+   <script>
+     // Your web app's Firebase configuration
+     var firebaseConfig = {
+     apiKey: "AIzaSyCYHOCPLOTru5zTg0_a-SuExHz_KX-kkeA",
+     authDomain: "web-n-mobile-83058.firebaseapp.com",
+     projectId: "web-n-mobile-83058",
+     storageBucket: "web-n-mobile-83058.appspot.com",
+     messagingSenderId: "643163847902",
+     appId: "1:643163847902:web:0487fd2cf163247c4c564f",
+     measurementId: "G-LK63S2XR4Y"
+   };
+     // Initialize Firebase
+     firebase.initializeApp(firebaseConfig);
+   </script>
+
+
+
+
+
+    <script src="js/ownerview.js"></script>
+</body>
+</html>

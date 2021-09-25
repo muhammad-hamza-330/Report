@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body onload="GetDataFromFireBase()">
+   <center> <h1 class="Mem">Member view</h1></center>
+    <div id="memberdiv">
+        <div id="currentdate" class="Mem"></div>
+
+        <div id="memberquestion" class="Ques">
+            <h1 class="Mem">Questions</h1>
+           <h4 class="Q1"> Q1:<input id="q1" type="text"></h4>
+           <h4 class="Q1"> A1: <input id="a1" type="text" placeholder="Answer"></h4>
+        <h4 class="Q1">  Q2:<input id="q2" type="text"></h4> 
+       <h4 class="Q1">     A2: <input id="a2" type="text" placeholder="Answer"></h4>
+          <h4 class="Q1">  Q3:<input id="q3" type="text"> </h4>
+         <h4 class="Q1">  A3: <input id="a3" type="text" placeholder="Answer"></h4> 
+            <button  class="update1" onclick="updateQuestions()">Submit Answers</button>
+        </div>
+
+
+
+    </div>
+
+
+
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+   
+   <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+   
+   <script>
+     // Your web app's Firebase configuration
+     var firebaseConfig = {
+     apiKey: "AIzaSyCYHOCPLOTru5zTg0_a-SuExHz_KX-kkeA",
+     authDomain: "web-n-mobile-83058.firebaseapp.com",
+     projectId: "web-n-mobile-83058",
+     storageBucket: "web-n-mobile-83058.appspot.com",
+     messagingSenderId: "643163847902",
+     appId: "1:643163847902:web:0487fd2cf163247c4c564f",
+     measurementId: "G-LK63S2XR4Y"
+   };
+     // Initialize Firebase
+     firebase.initializeApp(firebaseConfig);
+   </script>
+
+
+
+
+
+    <script src="memberview.js"></script>
+</body>
+</html>

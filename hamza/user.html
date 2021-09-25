@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body onload="GetDataFromFireBase()">
+    
+    <div  class="maindiv mt20">
+      
+
+        <div id="ownteam" class="ownteam t1 ">
+          <h1 class="t1" style="text-shadow: 2px 2px 6px gray" >Team you own</h1>
+
+           
+
+
+        </div>
+
+
+<div class="otherteam t1"> 
+  <h1 style="text-shadow: 2px 2px 6px gray">Team you are part of</h1>
+
+
+  <div class="teambox t2">
+    <h2>Dummy Team A</h2>
+    <h4>Seo </h4>
+    <p class="para">Members Email: sadsadas , dsada , eaeawe </p>  
+  
+  
+    <a href="memberview.html#iddd1"> 
+    <button type="button" class="btn btn-primary addbtn">
+    View team
+  </button>
+    
+    </a>
+    
+    </div>
+      
+
+
+    
+  <div class="teambox t2">
+    <h2>Dummy TEAM B</h2>
+    <h4>Seo </h4>
+    <p>Members Email: sadsadas , dsada , eaeawe </p>  
+  
+  
+    <a href="memberview.html#iddd2"> 
+    <button type="button" class="btn btn-primary addbtn">
+    View team
+  </button>
+    
+    </a>
+    
+    </div>
+      
+</div>
+        
+    
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary addbtn jumma" data-toggle="modal" data-target="#exampleModal">
+  +
+</button>
+
+    </div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Create new Team</h5>
+        <button type="button" id="closebtn" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <input type="text" placeholder="Team name" id="teamname"><br> <br> <br>
+        
+        <select name="category" id="teamcategory">
+          <option selected value="">Category</option>
+          <option value="development">Development</option>
+          <option value="seo">Seo</option>
+          <option value="marketing">Marketing</option>
+          
+        </select>
+        <br><br>
+        <br>
+        <input type="text" placeholder="Members Email" id="membersemail"><br>
+        
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button onclick="createTeam()" type="button" class="btn btn-primary">Create Team</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+   
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+   
+   <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+   
+   <script>
+     // Your web app's Firebase configuration
+     var firebaseConfig = {
+     apiKey: "AIzaSyCYHOCPLOTru5zTg0_a-SuExHz_KX-kkeA",
+     authDomain: "web-n-mobile-83058.firebaseapp.com",
+     projectId: "web-n-mobile-83058",
+     storageBucket: "web-n-mobile-83058.appspot.com",
+     messagingSenderId: "643163847902",
+     appId: "1:643163847902:web:0487fd2cf163247c4c564f",
+     measurementId: "G-LK63S2XR4Y"
+   };
+     // Initialize Firebase
+     firebase.initializeApp(firebaseConfig);
+   </script>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
